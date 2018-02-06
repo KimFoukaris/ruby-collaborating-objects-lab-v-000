@@ -18,7 +18,7 @@ class MP3Importer
   def import
       @filenames.each do |filename|
         Song.new_by_filename(filename)
-        binding.pry
+        puts filename
 
     end
   end
