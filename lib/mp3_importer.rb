@@ -5,7 +5,6 @@ class MP3Importer
 
   def initialize(path)
     @path = path
-    @filenames = []
   end
 
   def files
@@ -13,7 +12,7 @@ class MP3Importer
 
     @filenames.delete_if {|name| name.end_with? "."}
     @filenames #array of filenames
-    binding.pry
+    
   end
 
   def import
