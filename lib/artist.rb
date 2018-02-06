@@ -30,7 +30,6 @@ class Artist
       artist = self.new(artist_name)
       @@all = artist
       artist
-      binding.pry
     else
       artist
     end
