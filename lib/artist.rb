@@ -29,6 +29,7 @@ class Artist
     if @@all.find {|artist| artist.name == artist_name} == nil
       artist = self.new(artist_name)
       @@all = artist
+      artist
       binding.pry
     else
       artist
