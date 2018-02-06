@@ -9,14 +9,14 @@ class MP3Importer
   end
 
   def files
-    @filenames = Dir.entries(path)
-    @filenames.delete_if {|name| name.end_with? "."}
-    @filenames #array of filenames
+    filenames = Dir.entries(path)
+    filenames.delete_if {|name| name.end_with? "."}
+    filenames #array of filenames
     #binding.pry
   end
 
   def import
-      @filenames.each do |filename|
+      filenames.each do |filename|
         Song.new_by_filename(filename)
 
     end
