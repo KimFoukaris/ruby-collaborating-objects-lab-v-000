@@ -10,10 +10,10 @@ class MP3Importer
 
   def files
     @filenames = Dir.entries(path)
-    binding.pry
+    
     @filenames.delete_if {|name| name.end_with? "."}
     @filenames #array of filenames
-
+    binding.pry
   end
 
   def import
